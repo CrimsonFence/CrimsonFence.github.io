@@ -9,7 +9,7 @@
 
 .body {
     width: 100%;
-    height: 250vh;
+    height: 100%;
     display: flex;
     background-image: linear-gradient(to right, rgb(0, 0, 0), transparent);
     color: rgb(221, 221, 221);
@@ -22,10 +22,12 @@
 }
 
 .video {
+    height: 100vh;
     width: 100%;
-    z-index: -1;
+    z-index: -5;
     position: fixed;
     top: 0;
+    object-fit: cover;
 
 
 
@@ -197,18 +199,26 @@
 .proj1 {
     display: flex;
     margin-left: 10%;
-    height: 15.5%;
+    height: 10.8%;
     width: 90%;
+    margin-bottom: 14%;
+    border-radius: 3%;
+
+}
+
+.proj1:hover {
+    background-color: rgba(0, 0, 0, 20%);
 }
 
 .text1 {
-    width: 70%;
+    width: 100%;
 
 }
 
 .img1 {
     min-width: 220px;
     height: auto;
+    max-width: 386px;
     background-image: url(sample.jpg);
     background-size: 220px;
     background-repeat: no-repeat;
@@ -220,8 +230,83 @@
     flex-direction: column;
     margin-left: 5%;
     align-items: start;
+    width: 50%;
 }
 
 .title1 {
     margin-bottom: 10px;
+}
+
+.buttonproj1 {
+    position: absolute;
+    height: 10.8%;
+    width: 90%;
+    background-color: transparent;
+    border: none;
+
+}
+
+@media (max-width: 1000px) {
+    .body {
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+
+    .logos {
+        width: 70%;
+        height: 15vh;
+        margin: 0;
+    }
+
+    .logobar {
+        align-items: start;
+        height: 100%;
+    }
+
+
+    .rightside {
+        display: unset;
+        width: 100%;
+
+    }
+
+    .leftside {
+        display: contents;
+        position: relative;
+        width: 100%;
+        height: 50vh;
+
+    }
+
+    .proj1 {
+        line-height: 12px;
+    }
+
+    .projtext1 {
+        font-size: 11px;
+
+
+    }
+
+    .buttonproj1 {
+        height: 8%;
+    }
+
+    .title1 {
+        margin-bottom: 5px;
+    }
+
+    .img1 {
+        min-width: 0;
+        background-size: 130px;
+        width: 125px;
+    }
+
+    .text1 p {
+        line-height: 12px;
+    }
+
+
 }
